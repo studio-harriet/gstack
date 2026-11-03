@@ -936,6 +936,19 @@ Or copy the binaries directly:
 - `cp browse/dist/browse ~/.claude/skills/gstack/browse/dist/browse`
 - `cp design/dist/design ~/.claude/skills/gstack/design/dist/design`
 
+## gstack
+
+gstack is installed globally at `~/.claude/skills/gstack` (`git clone --single-branch
+--depth 1 https://github.com/garrytan/gstack.git ~/.claude/skills/gstack && cd
+~/.claude/skills/gstack && ./setup`). Run `/gstack-upgrade` to update it and
+`~/.claude/skills/gstack/bin/gstack-doctor` to check the install.
+
+Use /browse from gstack for all web browsing. Never use mcp__claude-in-chrome__* tools.
+Claude Code lists every installed gstack skill itself, so this section does not
+enumerate them (a pasted list goes stale with each release). If the Playwright
+Chromium download is blocked (sandboxed or proxied environments), point
+`GSTACK_CHROMIUM_PATH` at an existing Chromium binary; /browse honors it.
+
 ## Skill routing
 
 When the user's request matches an available skill, invoke it via the Skill tool. When in doubt, invoke the skill.
